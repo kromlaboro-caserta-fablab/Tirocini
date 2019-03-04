@@ -75,7 +75,8 @@ hr {
 	height:0;
 	-webkit-box-sizing:content-box;
 	-moz-box-sizing:content-box;
-	box-sizing:content-box
+	box-sizing:content-box;
+	width: 20%;
 }
 pre {
 	overflow:auto
@@ -1082,7 +1083,7 @@ hr {
 	margin-top:20px;
 	margin-bottom:20px;
 	border:0;
-	border-top:3px solid #0e0e0e;
+	border-top:5px solid #0e0e0e;
 }
 .sr-only {
 	position:absolute;

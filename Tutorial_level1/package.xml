@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RhinoInstaller Version="1.0.1">
+  <Package>
+    <Version>5.2.2013.0408</Version>
+    <ContentType>Tutorial</ContentType>
+    <PackagePath></PackagePath>
+    <Title>Guida pratica Livello 1</Title>
+    <ID>15C8588C-97A3-4837-915B-34DF2B6F6E98</ID>
+    <UpdateUrl>http://files.na.mcneel.com/McNeelUpdate/rhino/5.0/Tutorial/it-it-15C8588C-97A3-4837-915B-34DF2B6F6E98.version.xml</UpdateUrl>
+    <Locale>it-it</Locale>
+    <OS>Any</OS>
+    <RhinoPlatform>Rhino5_win32</RhinoPlatform>
+    <RhinoPlatform>Rhino5_win64</RhinoPlatform>
+  </Package>
+</RhinoInstaller>
