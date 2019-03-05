@@ -1,0 +1,71 @@
+Option Explicit
+'Script written by Pascal
+
+Rhino.AddStartupScript Rhino.LastLoadedScriptFile
+Rhino.AddAlias "BatchSave3dmNoData","_NoEcho _-Runscript (BatchSave3dmNoData)"
+
+Private Oldversion
+If IsEmpty(Oldversion) then
+	OldVersion = Rhino.ExeVersion()
+End If
+'Call BatchSave3dmNoData()
+Sub BatchSave3dmNoData()
+	
+	Dim sFolder: sFolder = Rhino.BrowseForFolder(Rhino.WorkingFolder,"Select folder to process", "Save with no plug-in data")
+	If isNull(sFolder) then exit sub
+	
+	Dim starg: starg = Rhino.BrowseForFolder(sFolder,"Select destination folder", "Save with no plug-in data")
+	If isNull(starg) then exit sub
+	
+	Dim aFiles: aFiles = Get3dmFiles(sFolder)
+	If not isArray(aFiles) then exit sub
+	
+	'	Dim IntVersion: IntVersion = Rhino.GetInteger("Rhino Version To Save",OldVersion,2,5)
+'	If IsNull(Intversion) Then Exit Sub
+'	Oldversion = IntVersion
+	
+	Rhino.Print UBound(aFiles)
+	dim sFile
+	
+	For each sFile in aFiles
+		
+		Rhino.Command"_-Open " &chr(34) & sFolder & sFile &chr(34)
+	
+		Rhino.Command "_-SaveAs " & sTarg & sFile & " _SavePlugInData=_No _Enter"
+		
+	Next
+
+End Sub
+
+Function Get3dmFiles(sFolder)
+	'On Error Resume Next
+	Dim fso, ofolder, files, folderIdx, oFile
+  
+	Set fso = CreateObject("Scripting.FileSystemObject")
+
+	Set ofolder = fso.GetFolder(sFolder)
+	Set files = ofolder.Files
+	dim aFiles(), n
+	n = 0
+	
+	
+	For Each oFile In files' oFolder.Files
+		
+		Dim sFileName, sFileRoot, sExt, ExtLength
+		sFileName= CStr(oFile.Path)
+		sExt = Right(sFileName, 3)
+		If (sExt = "3dm") Then
+			
+			redim preserve aFiles(n)
+			aFiles(n) =  oFile.Name
+			n = n + 1
+			
+		End If
+	Next
+
+	
+	Rhino.Print Join(aFiles,", ")
+	
+	Get3dmFiles = aFiles
+	set fso = nothing
+End function
