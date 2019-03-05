@@ -16,3 +16,8 @@ https://www.unicampania.it/doc/RipartizioniFS/RS/Varie/Strutture_Convenzionate17
 # **Students:**
 
 [Maria Grieco](https://kromlaboro-caserta-fablab.github.io/Tirocini/maria-grieco/)
+
+# **Tutorials/Resourse Ext:**
+
+[Rhinoceros 3D Level 1](https://github.com/kromlaboro-caserta-fablab/Tirocini/tree/master/Tutorial_level1)
+
