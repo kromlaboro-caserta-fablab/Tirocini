@@ -1082,7 +1082,8 @@ hr {
 	margin-top:20px;
 	margin-bottom:20px;
 	border:0;
-	border-top:3px solid #0e0e0e;
+	border-top:5px solid #393333;
+	width: 20%;
 }
 .sr-only {
 	position:absolute;
