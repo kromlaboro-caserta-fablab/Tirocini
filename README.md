@@ -89,7 +89,8 @@ https://www.unicampania.it/doc/RipartizioniFS/RS/Varie/Strutture_Convenzionate17
 
 [RDWorks](http://en.rd-acs.com/down.aspx?TypeId=50075&FId=t14:50075:14)
 
-[Japanese wood Joint] (https://www.thingiverse.com/thing:169723)
-[Japanese wood Joint] (https://makezine.com/2012/04/13/cnc-panel-joinery-notebook/)
+[Japanese wood Joint - Thingiverse](https://www.thingiverse.com/thing:169723)
+
+[Japanese wood Joint - Makezine](https://makezine.com/2012/04/13/cnc-panel-joinery-notebook/)
 
 
